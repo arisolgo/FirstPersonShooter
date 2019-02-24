@@ -1,0 +1,7 @@
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\bin\Debug\FirstPersonShooter.exe.config
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\bin\Debug\FirstPersonShooter.exe
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\bin\Debug\FirstPersonShooter.pdb
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\obj\Debug\FirstPersonShooter.csprojAssemblyReference.cache
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\obj\Debug\FirstPersonShooter.csproj.CoreCompileInputs.cache
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\obj\Debug\FirstPersonShooter.exe
+D:\Personal Files\Ariel HDD\Education\PUCMM\Programacion1\FirstPersonShooter\FirstPersonShooter\FirstPersonShooter\obj\Debug\FirstPersonShooter.pdb

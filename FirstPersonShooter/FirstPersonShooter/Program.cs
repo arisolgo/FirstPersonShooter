@@ -23,26 +23,27 @@ namespace FirstPersonShooter
             var shotGun = new ShotGun();
 
             var player = new Player("Ariel", 100);
-            
 
-            player.PickWeapon(handGun);
-            player.Attack();
-            player.PickWeapon(shotGun);
-            player.SwitchWeapon();
-            player.Attack();
 
-            player.PickWeapon(handGun);
+                player.PickWeapon(handGun);
+                player.Attack();
+                player.PickWeapon(shotGun);
+                player.SwitchWeapon();
+                player.Attack();
 
-            player.PickWeapon(ak47);
-            player.Attack();
+                player.PickWeapon(handGun);
 
-            player.ShowInventory();
-            player.DropWeapon(handGun);
-            player.ShowInventory();
-            player.DropWeapon(ak47);
-            player.ShowInventory();
+                player.PickWeapon(ak47);
+                player.Attack();
 
-            player.PickWeapon(handGun);
+                player.ShowInventory();
+                player.DropWeapon(handGun);
+                player.ShowInventory();
+                player.DropWeapon(ak47);
+                player.ShowInventory();
+
+                player.PickWeapon(handGun);
+           
 
         }
     }

@@ -63,18 +63,23 @@ namespace FirstPersonShooter
             }
 
         }
-          
+
         //Atacando
         public void Attack()
         {
-            this.ActiveWeapon.Fire();
-            Console.WriteLine("Balas disponibles: " + this.ActiveWeapon.AmmoCount.ToString()+"\n");
-            if (this.ActiveWeapon.AmmoCount <= 0)
+            //Validando si tiene algun arma
+            if (weapons.Count > 0)
+            {
+                this.ActiveWeapon.Fire();
+                Console.WriteLine("Balas disponibles: " + this.ActiveWeapon.AmmoCount.ToString() + "\n");
+                if (this.ActiveWeapon.AmmoCount <= 0)
                 this.ActiveWeapon.Reload();
+            }
+            else //Si no tiene ningun arma no disparara.
+            {
+                Console.WriteLine("No tienes armas disponibles");
+            }
         }
-
-        
-       
 
         //Cambiando el primer arma por el 3ero
         public void CycleWeapon()
@@ -87,34 +92,46 @@ namespace FirstPersonShooter
         //Cambiando el 3er arma
         public void SwitchWeapon()
         {
-            IWeapon SaveWeapon;
-            SaveWeapon = weapons[0];
-            weapons[0] = weapons[1];
-            weapons[1] = SaveWeapon;
-            this.ActiveWeapon = weapons[0];
-            Console.WriteLine("\nHaz cambiado el orden de tus armas");
-            ShowInventory();
+            //Verificar si hay 2 armas para cambiar el orden
+            if(weapons.Count>=2)
+            {
+                IWeapon SaveWeapon;
+                SaveWeapon = weapons[0];
+                weapons[0] = weapons[1];
+                weapons[1] = SaveWeapon;
+                this.ActiveWeapon = weapons[0];
+                Console.WriteLine("\nHaz cambiado el orden de tus armas");
+                ShowInventory();
+            }
+            else
+            {
+                Console.WriteLine("No tienes armas suficientes para poder cambiar entre ellas.");
+            }
+           
 
         }
 
         //Mostrando armas disponibles
         public void ShowInventory()
-        {
-            if (weapons[0] == null && weapons[1] == null)
+        {//Si no hay armas
+            if (weapons.Count == 0)
             {
                 Console.WriteLine("No hay armas disponibles");
             }
-            else
+            //Si tiene armas
+            else if(weapons.Count > 0)
             {
-                Console.WriteLine("\n\tArmas disponibles:\n");
-                if (weapons[1] == null)
+                //Si tiene solo 1 arma
+                if (weapons[1] != null && weapons[0] == null || weapons[0] != null && weapons[1] == null)
                 {
+                    Console.WriteLine("\n\tArmas disponibles:\n");
                     Console.WriteLine("\t\t" + weapons[0].ToString() + "\n");
 
                 }
-                else
+                else if(weapons[1] != null && weapons[0] != null)
                 {
-                    for (int i = 0; i < 2; i++)
+                    Console.WriteLine("\n\tArmas disponibles:\n");
+                    for (int i = 0; i <2 ; i++)
                     {
                         Console.WriteLine("\t\t" + weapons[i].ToString() + "\n");
                     }
@@ -149,6 +166,10 @@ namespace FirstPersonShooter
                 Console.WriteLine("Haz soltado el arma " + weapons[1]);
                 weapons[1] = null;
                 
+            }
+            else if(weapons[1] == null && weapons[0] == null)
+            {
+                Console.WriteLine("No tienes ningun arma para soltarla.");
             }
             
         }

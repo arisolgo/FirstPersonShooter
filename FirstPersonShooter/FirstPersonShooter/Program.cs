@@ -24,8 +24,10 @@ namespace FirstPersonShooter
 
             var player = new Player("Ariel", 100);
 
+            player.Attack();
+            player.DropWeapon(handGun);
 
-                player.PickWeapon(handGun);
+               /* player.PickWeapon(handGun);
                 player.Attack();
                 player.PickWeapon(shotGun);
                 player.SwitchWeapon();
@@ -43,7 +45,7 @@ namespace FirstPersonShooter
                 player.ShowInventory();
 
                 player.PickWeapon(handGun);
-           
+           */
 
         }
     }

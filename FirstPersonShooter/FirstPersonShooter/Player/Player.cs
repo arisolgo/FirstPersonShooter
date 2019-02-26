@@ -17,7 +17,7 @@ namespace FirstPersonShooter
         
 
         int weaponCount = 0;
-        List<IWeapon> weapons = new List<IWeapon>(3);
+        List<IWeapon> weapons = new List<IWeapon>();
      
        public void PickWeapon(IWeapon weapon)
         {
@@ -89,7 +89,7 @@ namespace FirstPersonShooter
             Console.WriteLine( "\n" + this.ActiveWeapon + " ha sido reemplazada por " + weapons[0] + "\n");
         }
 
-        //Cambiando el 3er arma
+        //Cambiando el orden de las armas en la lista
         public void SwitchWeapon()
         {
             //Verificar si hay 2 armas para cambiar el orden
@@ -144,34 +144,39 @@ namespace FirstPersonShooter
         //Soltando el arma
         public void DropWeapon(IWeapon weapon)
         {
-            if (weapon == weapons[0] && weapons[1] == null)
+            if(weapons.Count > 0)
             {
-                Console.WriteLine("Haz soltado el arma " + weapons[0]);
-                weapons[0] = null;
-                Console.WriteLine("\nNo tienes armas en el inventario!\n");
+                if (weapon == weapons[0] || weapon == weapons[0] && weapons[1] == null)
+                {
+                    Console.WriteLine("Haz soltado el arma " + weapons[0]);
+                    weapons[0] = null;
+                    Console.WriteLine("\nNo tienes armas en el inventario!\n");
 
 
-            }
-            else if (weapon == weapons[0])
-            {
-                Console.WriteLine("Haz soltado el arma " + weapons[0]);
-                Console.WriteLine("Ahora tu active weapon es: " + weapon + "\n");
-                weapons[0] = weapons[1];
-                weapons[1] = null;
-               
-            }
-           
-            else if(weapon == weapons[1])
-            {
-                Console.WriteLine("Haz soltado el arma " + weapons[1]);
-                weapons[1] = null;
+                }
+                else if (weapon == weapons[0])
+                {
+                    Console.WriteLine("Haz soltado el arma " + weapons[0]);
+                    Console.WriteLine("Ahora tu active weapon es: " + weapon + "\n");
+                    weapons[0] = weapons[1];
+                    weapons[1] = null;
+
+                }
+
+                else if (weapon == weapons[1])
+                {
+                    Console.WriteLine("Haz soltado el arma " + weapons[1]);
+                    weapons[1] = null;
+
+                }
                 
             }
-            else if(weapons[1] == null && weapons[0] == null)
+            else if (weapons.Count == 0)
             {
                 Console.WriteLine("No tienes ningun arma para soltarla.");
             }
-            
+
+
         }
     }
 

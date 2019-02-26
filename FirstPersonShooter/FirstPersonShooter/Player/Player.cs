@@ -122,13 +122,13 @@ namespace FirstPersonShooter
             else if(weapons.Count > 0)
             {
                 //Si tiene solo 1 arma
-                if (weapons[1] != null && weapons[0] == null || weapons[0] != null && weapons[1] == null)
+                if (weapons.Count == 1)
                 {
                     Console.WriteLine("\n\tArmas disponibles:\n");
                     Console.WriteLine("\t\t" + weapons[0].ToString() + "\n");
 
                 }
-                else if(weapons[1] != null && weapons[0] != null)
+                else if(weapons.Count == 2)
                 {
                     Console.WriteLine("\n\tArmas disponibles:\n");
                     for (int i = 0; i <2 ; i++)
@@ -149,7 +149,7 @@ namespace FirstPersonShooter
                 if (weapon == weapons[0] || weapon == weapons[0] && weapons[1] == null)
                 {
                     Console.WriteLine("Haz soltado el arma " + weapons[0]);
-                    weapons[0] = null;
+                    weapons.RemoveAt(0);
                     Console.WriteLine("\nNo tienes armas en el inventario!\n");
 
 
@@ -159,14 +159,14 @@ namespace FirstPersonShooter
                     Console.WriteLine("Haz soltado el arma " + weapons[0]);
                     Console.WriteLine("Ahora tu active weapon es: " + weapon + "\n");
                     weapons[0] = weapons[1];
-                    weapons[1] = null;
+                    weapons.RemoveAt(1);
 
                 }
 
                 else if (weapon == weapons[1])
                 {
                     Console.WriteLine("Haz soltado el arma " + weapons[1]);
-                    weapons[1] = null;
+                    weapons.RemoveAt(1);
 
                 }
                 

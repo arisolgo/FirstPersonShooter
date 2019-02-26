@@ -24,39 +24,58 @@ namespace FirstPersonShooter
 
             var player = new Player("Ariel", 100);
 
+            /*   player.Attack();
+               player.DropWeapon(handGun);
+               player.PickWeapon(handGun);
+
+               player.SwitchWeapon();
+
+               player.ShowInventory();
+               player.PickWeapon(shotGun);
+               player.ShowInventory();
+               player.DropWeapon(shotGun);
+               player.ShowInventory();
+               player.DropWeapon(handGun);
+               player.DropWeapon(handGun);*/
+
+            /*  player.PickWeapon(handGun);
+              player.Attack();
+              player.PickWeapon(shotGun);
+              player.SwitchWeapon();
+              player.Attack();
+
+              player.PickWeapon(handGun);
+
+              player.PickWeapon(ak47);
+              player.Attack();
+
+              player.ShowInventory();
+              player.DropWeapon(handGun);
+              player.ShowInventory();
+              player.DropWeapon(ak47);
+              player.ShowInventory();
+
+              player.PickWeapon(handGun);
+             player.PickWeapon(ak47);
+             player.PickWeapon(ak47);*/
+
+            /*player.ShowInventory();
+            player.PickWeapon(handGun);
             player.Attack();
             player.DropWeapon(handGun);
-            player.PickWeapon(handGun);
-           
-            player.SwitchWeapon();
-           
             player.ShowInventory();
-            player.PickWeapon(shotGun);
-            player.ShowInventory();
-            player.DropWeapon(shotGun);
-            player.ShowInventory();
-            player.DropWeapon(handGun);
-            player.DropWeapon(handGun);
+            player.PickWeapon(handGun);*/
 
-            /* player.PickWeapon(handGun);
-             player.Attack();
-             player.PickWeapon(shotGun);
-             player.SwitchWeapon();
-             player.Attack();
+           /* player.PickWeapon(handGun);
+            player.Attack();
+            player.Attack();
+            player.Attack();
+            player.Attack();
+            player.Attack();
+            player.Attack();
+            player.Attack();*/
 
-             player.PickWeapon(handGun);
 
-             player.PickWeapon(ak47);
-             player.Attack();
-
-             player.ShowInventory();
-             player.DropWeapon(handGun);
-             player.ShowInventory();
-             player.DropWeapon(ak47);
-             player.ShowInventory();
-
-             player.PickWeapon(handGun);
-        */
 
         }
     }

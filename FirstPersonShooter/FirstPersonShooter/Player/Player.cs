@@ -24,7 +24,7 @@ namespace FirstPersonShooter
             weaponCount++;
 
            //Cogiendo primer arma
-            if(weaponCount == 1 || weapons[0] == null)
+            if(weaponCount == 1 || weapons.Count == 0)
             {
                     this.ActiveWeapon = weapon;
                     weapons.Add(weapon);
@@ -36,13 +36,14 @@ namespace FirstPersonShooter
            else if (weapons[0] == weapon && weaponCount>=2)
             {
                 weapons[0].Reload();
+                Console.WriteLine("Con " + weapons[0].AmmoCount + " balas");
             }
 
 
              
             //Escogiendo el segundo arma
-             else if (weaponCount == 2 || weapons[1] == null )
-            // else if(weapons.Count != 2)
+             else if (weaponCount == 2 || weapons.Count == 1)
+           
              {
                 weapons.Add(weapon);
                 weapons[1] = weapon;
@@ -52,7 +53,8 @@ namespace FirstPersonShooter
                 else if(weapons[1] == weapon) 
                 {
                     weapons[1].Reload();
-                }
+                Console.WriteLine("Con " + weapons[1].AmmoCount + " balas");
+            }
             
             //Verificando si se esta escogiendo un tercer arma
             else if (weaponCount > 2)
@@ -125,7 +127,9 @@ namespace FirstPersonShooter
                 if (weapons.Count == 1)
                 {
                     Console.WriteLine("\n\tArmas disponibles:\n");
-                    Console.WriteLine("\t\t" + weapons[0].ToString() + "\n");
+                    Console.WriteLine("\t\t" + weapons[0].ToString()+"\n" + "\t\tCon " + weapons[0].AmmoCount + " balas" + "\n");
+                   
+
 
                 }
                 else if(weapons.Count == 2)
@@ -133,7 +137,7 @@ namespace FirstPersonShooter
                     Console.WriteLine("\n\tArmas disponibles:\n");
                     for (int i = 0; i <2 ; i++)
                     {
-                        Console.WriteLine("\t\t" + weapons[i].ToString() + "\n");
+                        Console.WriteLine("\t\t" + weapons[i].ToString() + "\n" + "\t\tCon " + weapons[i].AmmoCount + " balas" + "\n");
                     }
                 }
             }

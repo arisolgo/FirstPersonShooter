@@ -21,7 +21,7 @@ namespace FirstPersonShooter
 
                 this.AmmoCount += 6;
             
-            Console.WriteLine("Handgun Recargado\n");
+            Console.WriteLine("Handgun Recargado");
         }
         public HandGun()
         {

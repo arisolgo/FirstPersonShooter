@@ -24,7 +24,7 @@ namespace FirstPersonShooter
             
            
 
-            Console.WriteLine("AK47 Recargado\n");
+            Console.WriteLine("AK47 Recargado");
 
         }
 
